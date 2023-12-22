@@ -18,8 +18,8 @@ public class NormalLoginController
 
 	/**
 	 * Simple user registration
-	 * @param requestRegister
-	 * @return
+	 * @param requestRegister: (form-data)Request DTO
+	 * @return ResponseRegister: (Result)Response DTO
 	 */
 	@PostMapping("/register")
 	public ResponseEntity<ResponseRegister> register(RequestRegister requestRegister)
@@ -35,6 +35,11 @@ public class NormalLoginController
 		}
 	}
 
+	/**
+	 * Simple user login
+	 * @param requestLogin: (form-data)Request DTO for Login
+	 * @return ResponseLogin: (Result)Response DTO for Login
+	 */
 	@PostMapping("/login")
 	public ResponseEntity<ResponseLogin> login(RequestLogin requestLogin)
 	{

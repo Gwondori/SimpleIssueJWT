@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MainController
 {
+	/**
+	 * Get token from DB
+	 * @param email: (form-data)User's Email
+	 * @return String: (Result)Token
+	 */
 	@PostMapping("/get-token")
 	public String getToken(@RequestBody String email)
 	{
