@@ -21,11 +21,11 @@ public class GoogleLoginController
 	private final String clientSecretPasswd = "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";
 
 	/**
-	 * login(): Login with Google(/login/google)
+	 * login(): Login with Google(/auth/google/login)
 	 * @param authCode: Google OAuth2.0 Authentication code
 	 * @return Map<String, String>
 	 */
-	@GetMapping("/")
+	@GetMapping("/login")
 	public Map<String, String> login(@RequestParam(value = "code") String authCode)
 	{
 		Map<String, String> response = new HashMap<>();
@@ -59,7 +59,7 @@ public class GoogleLoginController
 	}
 
 	/**
-	 * getLoginUrl(): Get Google OAuth2.0 Login URL(/login/google/url)
+	 * getLoginUrl(): Get Google OAuth2.0 Login URL(/auth/google/url)
 	 * @return String: Google OAuth2.0 Login URL
 	 */
 	@PostMapping("/url")
